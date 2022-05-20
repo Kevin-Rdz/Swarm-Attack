@@ -38,5 +38,5 @@ public abstract class Characters extends Actor
         setLocation(getX(), getY() + fallSpeed);
         fallSpeed += ACCELERATION_G;
     }
-    
+
 }

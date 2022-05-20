@@ -5,5 +5,5 @@ comment1.target=void\ actions()
 comment2.params=
 comment2.target=void\ moveAround()
 comment3.params=
-comment3.target=void\ checkCollisions()
+comment3.target=void\ takeDamage()
 numComments=4
