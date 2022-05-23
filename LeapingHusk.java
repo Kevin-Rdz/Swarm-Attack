@@ -8,6 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class LeapingHusk extends Husk
 {
+    private int attack = 1;
+    
+    public int getAttack()
+    {
+        return attack;
+    }
+    
     public int getDirection()
     {
          return 1;

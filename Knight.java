@@ -1,17 +1,20 @@
 import greenfoot.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Knight extends Characters
 {
     private static final int WALK_SPEED = 5;
     private static final int JUMP_HEIGHT = -18;
     
-    private int lives = 3;
+    private int lives = 10;
     private int immunityTime = 0;
     private int direction = RIGHT;
     
     public void actions()
     {
         moveAround();
-        //checkCollisions();
+        takeDamage();
     }
     
     private void moveAround()
@@ -32,16 +35,19 @@ public class Knight extends Characters
         }
     }
     
-    private void checkCollisions()
-    {
-        Obstacle obstacle = (Obstacle)getOneIntersectingObject(Obstacle.class);
+    private void takeDamage()
+    {   
+        List<Enemy> attackers = new ArrayList<Enemy>();
+        attackers = getIntersectingObjects(Enemy.class);
         
-        if(obstacle != null)
+        for(int i=0; i<attackers.size(); i++)
         {
-            if(direction == RIGHT)
+            if(attackers.get(i) != null)
             {
-                setLocation(obstacle.getImage().getWidth(), getY());
+                lives = lives - attackers.get(i).getAttack();
             }
         }
+        
+        attackers = null;
     }
 }

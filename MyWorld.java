@@ -32,9 +32,6 @@ public class MyWorld extends World
         addObject(spikes2,800,458);
         Spikes spikes3 = new Spikes();
         addObject(spikes3,317,468);
-        Crawlid crawlid = new Crawlid();
-        addObject(crawlid,961,156);
-        crawlid.setLocation(957,102);
         HuskBully huskBully = new HuskBully();
         addObject(huskBully,651,324);
         huskBully.setLocation(1143,434);
@@ -52,5 +49,7 @@ public class MyWorld extends World
         LeapingHusk leapingHusk = new LeapingHusk();
         addObject(leapingHusk,543,260);
         huskHornhead.setLocation(227,448);
+        Crawlid crawlid = new Crawlid();
+        addObject(crawlid,977,137);
     }
 }
