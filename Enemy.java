@@ -14,6 +14,8 @@ public abstract class Enemy extends Characters
     private int direction = getDirection();
     private int life = 3;
     
+    public abstract int getAttack();
+    
     public void actions()
     {
         moveAround();
@@ -53,6 +55,8 @@ public abstract class Enemy extends Characters
         
         return true;
     }
+    
+    
     
     public abstract int getDirection();
 }
