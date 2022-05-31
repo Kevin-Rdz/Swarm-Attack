@@ -4,7 +4,7 @@ public class MyWorld extends World
 {
     public MyWorld()
     {
-        super(1200, 600, 1);
+        super(1200, 600, 1, false);
         prepare();
     }
     
@@ -51,5 +51,7 @@ public class MyWorld extends World
         huskHornhead.setLocation(227,448);
         Crawlid crawlid = new Crawlid();
         addObject(crawlid,977,137);
+        Kingsmould kingsmould = new Kingsmould();
+        addObject(kingsmould,529,394);
     }
 }
