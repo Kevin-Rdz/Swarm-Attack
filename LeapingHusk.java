@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class LeapingHusk extends Husk
 {
     private int attack = 1;
+    private int direction = LEFT;
     
     public int getAttack()
     {
@@ -17,6 +18,11 @@ public class LeapingHusk extends Husk
     
     public int getDirection()
     {
-         return 1;
+         return direction;
+    }
+    
+    public void setDirection(int direction)
+    {
+        this.direction = direction;
     }
 }

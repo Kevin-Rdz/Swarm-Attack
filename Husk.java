@@ -8,5 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class Husk extends Enemy
 {
+    
     public abstract int getDirection();
+    public abstract void setDirection(int direction);
 }

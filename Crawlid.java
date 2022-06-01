@@ -3,6 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Crawlid extends Enemy
 {
     private int attack = 1;
+    private int direction = LEFT;
     
     public int getAttack()
     {
@@ -11,6 +12,11 @@ public class Crawlid extends Enemy
     
     public int getDirection()
     {
-        return 1;
+        return direction;
+    }
+    
+    public void setDirection(int direction)
+    {
+        this.direction = direction;
     }
 }
