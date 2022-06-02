@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Crawlid
+comment1.params=
+comment1.target=int\ getAttack()
+comment2.params=
+comment2.target=int\ getDirection()
+comment3.params=direction
+comment3.target=void\ setDirection(int)
+numComments=4
