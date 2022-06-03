@@ -18,9 +18,10 @@ public class Knight extends Insect
     private boolean attackAvaible = true;
     private boolean pushAvaible = true;
     
-    private int lives = 1;
-    private int immunityTime = 0;
+    private int lives = 5;
+    private int immunityTime = 0;   
     private int direction = RIGHT;
+    private int score;
     
     public Knight()
     {
@@ -67,16 +68,24 @@ public class Knight extends Insect
     {
         Live live = (Live)getOneIntersectingObject(Live.class);
         Immunity immunity = (Immunity)getOneIntersectingObject(Immunity.class);
+        Orbe orbe = (Orbe)getOneIntersectingObject(Orbe.class);
 
         if(live != null)
         {
             getWorld().removeObject(live);
             lives++;
+            score = score + live.getScore();
         }
         else if(immunity != null)
         {
             getWorld().removeObject(immunity);
             setImmunityTime(100);
+            score = score + immunity.getScore();
+        }
+        else if(orbe != null)
+        {
+            getWorld().removeObject(orbe);
+            score = score + orbe.getScore();
         }
     }
 
@@ -100,25 +109,25 @@ public class Knight extends Insect
     
     public void attack()
     {
-        if(attackAvaible == true)
+        if(attackAvaible)
         {
             if(Greenfoot.isKeyDown("SPACE") && direction == RIGHT)
             {
                 Attack attack = new Attack(10);
-                getWorld().addObject(attack, getX() + 10, getY());
-                attack.turnTowards(getX() + 100, getY());
+                getWorld().addObject(attack, getX(), getY());
+                attack.turnTowards(getX() + 10, getY());
                 attackAvaible = false;
             }
             if(Greenfoot.isKeyDown("SPACE") && direction == LEFT)
             {
                 Attack attack = new Attack(10);
-                getWorld().addObject(attack, getX() - 1, getY());
-                attack.turnTowards(getX() -100, getY());
+                getWorld().addObject(attack, getX(), getY());
+                attack.turnTowards(getX() - 10, getY());
                 attackAvaible = false;
             }
             
         }
-        if(attackAvaible == false)
+        if(!attackAvaible)
         {
             counterAttack++;
             if(counterAttack < MAX_COUNTER_ATTACK)
@@ -132,7 +141,7 @@ public class Knight extends Insect
     
     public void takeDamage()
     {
-        if(pushAvaible == true)
+        if(pushAvaible)
         {
             List<Enemy> attackers = new ArrayList<Enemy>();
             attackers = getIntersectingObjects(Enemy.class);
@@ -156,7 +165,7 @@ public class Knight extends Insect
             pushAvaible = false;
             attackers = null;
         }
-        if(pushAvaible == false)
+        if(!pushAvaible)
         {
             counterPushed++;
             if(counterPushed < MAX_COUNTER_PUSHED)
@@ -172,7 +181,7 @@ public class Knight extends Insect
     {
         if(lives <= 0)
         {
-            //PENDIENTE: QUE SUCEDE CUANDO PIERDE TODAS LAS VIDAS?
+            Greenfoot.setWorld(new Menu());
         }
     }
     

@@ -23,10 +23,12 @@ public class Attack extends Item
     
     public void moveAttack()
     {
-        Knight knight = new Knight();
-        if(knight.getDirection() == knight.RIGHT)
-        {
-            setLocation(getX(), getY());
-        }
+        
+    }
+    
+    public int getScore()
+    {
+        return 0;
     }
 }
+

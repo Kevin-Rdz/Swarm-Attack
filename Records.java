@@ -20,7 +20,7 @@ public class Records extends Botones
             Greenfoot.delay(10);
             sound.play();
             Greenfoot.delay(40);
-            Greenfoot.setWorld(new Marcas());
+            Greenfoot.setWorld(new Score());
         }
     }
 }

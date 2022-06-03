@@ -39,15 +39,15 @@ public class Level3 extends Levels
     }
     public void items(){
         for(int x=100;x<370;x+=40){
-            addObject(new orbe(), x, 110);
-            addObject(new orbe(), x, 470);
+            addObject(new Orbe(), x, 110);
+            addObject(new Orbe(), x, 470);
         }
         for(int x=480;x<800;x+=40){
-            addObject(new orbe(), x, 280);
+            addObject(new Orbe(), x, 280);
         }
         for(int x=810;x<1090;x+=40){
-            addObject(new orbe(), x, 90);
-            addObject(new orbe(), x, 470);
+            addObject(new Orbe(), x, 90);
+            addObject(new Orbe(), x, 470);
         }
         
     }

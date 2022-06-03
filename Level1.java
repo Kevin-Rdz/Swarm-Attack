@@ -21,15 +21,15 @@ public class Level1 extends Levels
     }
     public void items(){
         for(int x=100;x<370;x+=40){
-            addObject(new orbe(), x, 110);
-            addObject(new orbe(), x, 470);
+            addObject(new Orbe(), x, 110);
+            addObject(new Orbe(), x, 470);
         }
         for(int x=400;x<800;x+=40){
-            addObject(new orbe(), x, 350);
+            addObject(new Orbe(), x, 350);
         }
         for(int x=810;x<1090;x+=40){
-            addObject(new orbe(), x, 150);
-            addObject(new orbe(), x, 470);
+            addObject(new Orbe(), x, 150);
+            addObject(new Orbe(), x, 470);
         }
         
         
@@ -55,12 +55,8 @@ public class Level1 extends Levels
         addObject(floor5,963,227);
         floor.setLocation(274,534);
         floor.setLocation(235,536);
-        Spikes spikes3 = new Spikes();
-        addObject(spikes3,317,468);
         HuskHornhead huskHornhead = new HuskHornhead();
         addObject(huskHornhead,146,440);
-        spikes3.setLocation(304,466);
-        spikes3.setLocation(226,121);
         huskHornhead.setLocation(186,463);
         LeapingHusk leapingHusk = new LeapingHusk();
         addObject(leapingHusk,543,260);
