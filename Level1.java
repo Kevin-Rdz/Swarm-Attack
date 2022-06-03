@@ -13,12 +13,21 @@ public class Level1 extends Levels
      * Constructor for objects of class Uno.
      * 
      */
+    private static Knight knight;
+    private static int points=0;
     public Level1()
     {
-
+        Knight knight = new Knight();
+        addObject(knight,70,100);
         prepare();
+        points=0;
         items();
     }
+    public static int getScore(){
+        points+=knight.getPuntuacion();
+        return points+1;
+    }
+    
     public void items(){
         for(int x=100;x<370;x+=40){
             addObject(new Orbe(), x, 110);
@@ -39,8 +48,6 @@ public class Level1 extends Levels
     }
     private void prepare()
     {
-        Knight knight = new Knight();
-        addObject(knight,70,100);
         Floor floor = new Floor();
         addObject(floor,241,244);
         floor.setLocation(205,331);

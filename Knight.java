@@ -17,7 +17,7 @@ public class Knight extends Insect
     private int counterLoseImmunity;
     private boolean attackAvaible = true;
     private boolean pushAvaible = true;
-    
+    private static int points=0;
     private int lives = 3;
     private int immunityTime = 0;   
     private int direction = RIGHT;
@@ -34,7 +34,13 @@ public class Knight extends Insect
         imagesAttack[1] = new GreenfootImage("images/hollow knight attack 2.png");
         imagesAttack[2] = new GreenfootImage("images/hollow knight attack 3.png");
     }
+    public static void setPuntuacion(int puntuacion){
+        points=puntuacion;
+    }
     
+    public static int getPuntuacion(){
+        return points;
+    }
     public void act()
     {
         moveAround();

@@ -13,11 +13,18 @@ public class Level3 extends Levels
      * Constructor for objects of class Tres.
      * 
      */
+    private static Knight knight;
+    private static int points=0;
      public Level3()
     {
         prepare();
         items();
     }
+    public static int getScore(){
+        points+=knight.getPuntuacion();
+        return points+1;
+    }
+    
     private void prepare()
     {
         Knight knight = new Knight();
