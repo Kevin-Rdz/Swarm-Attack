@@ -16,4 +16,9 @@ public class Immunity extends Item
     {
         // Add your action code here.
     }
+    
+    public int getScore()
+    {
+            return -20;
+    }
 }
