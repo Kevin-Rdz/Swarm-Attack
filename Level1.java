@@ -57,12 +57,23 @@ public class Level1 extends Levels
         floor.setLocation(235,536);
         HuskHornhead huskHornhead = new HuskHornhead();
         addObject(huskHornhead,146,440);
+        Immunity inmunidad = new Immunity();
+        addObject(inmunidad,80,440);
+        Spikes uno = new Spikes();
+        addObject(uno,380,115);
+        huskHornhead.setLocation(186,463);
+        HuskBully huskbully = new HuskBully();
+        addObject(huskbully,900,440);
+        Spikes dos = new Spikes();
+        addObject(dos,785,460);
         huskHornhead.setLocation(186,463);
         LeapingHusk leapingHusk = new LeapingHusk();
         addObject(leapingHusk,543,260);
         huskHornhead.setLocation(227,448);
         Crawlid crawlid = new Crawlid();
         addObject(crawlid,977,137);
+        Spikes tres = new Spikes();
+        addObject(tres,787,163);
         addObject(new Portal1(),1100,410); 
     }
     }

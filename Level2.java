@@ -34,7 +34,20 @@ public class Level2 extends Levels
         addObject(floor5,850,350);
         Floor floor6 = new Floor();
         addObject(floor6,980,130);
-
+        HuskHornhead huskHornhead = new HuskHornhead();
+        addObject(huskHornhead,250,440);
+        HuskBully huskbully = new HuskBully();
+        addObject(huskbully,650,440);
+        LeapingHusk leapingHusk = new LeapingHusk();
+        addObject(leapingHusk,350,90);
+        Spikes uno = new Spikes();
+        addObject(uno,580,117);
+        Spikes dos = new Spikes();
+        addObject(dos,675,286);
+        Crawlid crawlid = new Crawlid();
+        addObject(crawlid,900,250);
+        Live vida = new Live();
+        addObject(vida,1000,50);
         addObject(new Portal2(),100,410); 
     }
     public void items(){

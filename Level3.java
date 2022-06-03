@@ -34,7 +34,20 @@ public class Level3 extends Levels
         addObject(floor4,947,525);
         Floor floor5 = new Floor();
         addObject(floor5,963,150);
-        
+        HuskHornhead huskHornhead = new HuskHornhead();
+        addObject(huskHornhead,186,463);
+        HuskHornhead huskHornhead2 = new HuskHornhead();
+        addObject(huskHornhead2,900,463);
+        HuskBully huskbully = new HuskBully();
+        addObject(huskbully,200,90);;
+        Kingsmould jefe = new Kingsmould();
+        addObject(jefe,543,260);
+        Spikes uno = new Spikes();
+        addObject(uno,790,86);
+        Spikes dos = new Spikes();
+        addObject(dos,380,115);
+        Spikes tres = new Spikes();
+        addObject(tres,410,480);
         addObject(new Portal3(),1100,410); 
     }
     public void items(){

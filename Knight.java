@@ -18,7 +18,7 @@ public class Knight extends Insect
     private boolean attackAvaible = true;
     private boolean pushAvaible = true;
     
-    private int lives = 5;
+    private int lives = 3;
     private int immunityTime = 0;   
     private int direction = RIGHT;
     private int score;
