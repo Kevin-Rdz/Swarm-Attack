@@ -21,7 +21,7 @@ public class Knight extends Insect
     private int lives = 3;
     private int immunityTime = 0;   
     private int direction = RIGHT;
-    private int score;
+    public static int score;
     
     public Knight()
     {
@@ -39,7 +39,7 @@ public class Knight extends Insect
     }
     
     public static int getPuntuacion(){
-        return points;
+        return score;
     }
     public void act()
     {

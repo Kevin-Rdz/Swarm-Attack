@@ -22,6 +22,7 @@ public class Level2 extends Levels
     }
      public static int getScore(){
         points+=knight.getPuntuacion();
+        knight.score = 0;
         return points+1;
     }
     private void prepare()

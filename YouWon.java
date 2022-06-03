@@ -22,8 +22,11 @@ public class YouWon extends World
         super(900, 700, 1); 
         finalPoints=0;
         finalPoints=finalPoints+Level1.getScore();
+        Knight.score = 0;
         finalPoints=finalPoints+Level2.getScore();
+        Knight.score = 0;
         finalPoints=finalPoints+Level3.getScore();
+        Knight.score = 0;
         finalPoints=finalPoints-3;
         showText("PUNTAJE FINAL = "+finalPoints, 450, 600);
         addObject(new back(),100,650);
