@@ -58,8 +58,10 @@ public class Level2 extends Levels
             addObject(new Orbe(), x, 110);
         }
         for(int x=800;x<1200;x+=40){
-            addObject(new Orbe(), x, 280);
             addObject(new Orbe(), x, 50);
+        }
+        for(int x=750;x<1000;x+=40){
+            addObject(new Orbe(), x, 280);
         }
         for(int x=500;x<750;x+=40){
             addObject(new Orbe(), x, 470);
